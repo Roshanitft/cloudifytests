@@ -6,7 +6,7 @@
 
 **eksctl –** A command line tool for working with EKS clusters that automates many individual tasks.
 
-**Required AWS IAM permissions –** The IAM security principal that you're using must have permissions to work with Amazon EKS IAM roles and service linked roles, AWS CloudFormation, and a VPC and related resources.
+
 
 ## Steps to add infrastructure to your local
 
