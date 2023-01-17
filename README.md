@@ -27,11 +27,11 @@ Apply helm using following command:
         --set ingress.hosts[0]=$ingress_host \
         --set sessionbe.serviceAccountName=$org_name --set nginxhpa.metadata.namespace=$org_name \
         --set be.ORG_NAMESPACE=$org_name \
-        --set sessionbe.image.repository="975876589297.dkr.ecr.us-east-1.amazonaws.com/cloudifytest_be:stg" \
-        --set sessionUi.image.repository="975876589297.dkr.ecr.us-east-1.amazonaws.com/cloudifytests_fe" --set sessionUi.image.tag="tunnel_fe" \
-        --set smcreate.image.repository="975876589297.dkr.ecr.us-east-1.amazonaws.com/sm_create:stg"  \
-        --set smdelete.image.repository="975876589297.dkr.ecr.us-east-1.amazonaws.com/sm_delete:stg" \
-        --set sessionmanager.AWS_ECR_IMAGE="975876589297.dkr.ecr.us-east-1.amazonaws.com"   \
+        --set sessionbe.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/cloudifytest_be:stg" \
+        --set sessionUi.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/cloudifytests_fe" --set sessionUi.image.tag="tunnel_fe" \
+        --set smcreate.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sm_create:stg"  \
+        --set smdelete.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sm_delete:stg" \
+        --set sessionmanager.AWS_ECR_IMAGE="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com"   \
         --set smlogsvalues.ORG_NAME=$org_name \
         --set behpa.metadata.namespace=$org_name --set sessionManagaerhpa.metadata.namespace=$org_name \
         --set role.metadata.namespace=$org_name --set roleBinding.metadata.namespace=$org_name \
