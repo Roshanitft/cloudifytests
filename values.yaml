@@ -239,25 +239,25 @@ nginxhpa:
   kind: HorizontalPodAutoscaler
   metadata:
     name: cloudifytests-nginx 
-    namespace: algosec   
+    namespace: test   
 behpa:
   apiVersion: autoscaling/v2beta2
   kind: HorizontalPodAutoscaler
   metadata:
     name: cloudifytests-session-be
-    namespace: algosec 
+    namespace: test
 sessionManagaerhpa:
   apiVersion: autoscaling/v2beta2
   kind: HorizontalPodAutoscaler
   metadata:
     name: cloudifytests-sessionmanager 
-    namespace: algosec
+    namespace: test
 smcreatehpa:
   apiVersion: autoscaling/v2beta2
   kind: HorizontalPodAutoscaler
   metadata:
     name: cloudifytests-sm-create
-    namespace: algosec
+    namespace: test
   minReplicas: 1
   maxReplicas: 100
   cpuaverageValue: 200m
@@ -268,7 +268,7 @@ smdeletehpa:
   kind: HorizontalPodAutoscaler
   metadata:
     name: cloudifytests-sm-delete
-    namespace: algosec
+    namespace: test
   minReplicas: 1
   maxReplicas: 100
   cpuaverageValue: 200m
@@ -299,5 +299,5 @@ ingress:
     nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
   path: /
   hosts:
-  - .cloudifytests.io
+  - < put your domain name >
   tls: []
