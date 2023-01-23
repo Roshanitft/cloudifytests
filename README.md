@@ -13,6 +13,11 @@
 Git clone the project:
 
        $ git clone https://github.com/Roshanitft/cloudifytests.git
+       
+To patch the core-dns deployment with taints and tolleration use the following command.
+
+        $ kubectl patch deployment coredns -p \
+        '{"spec":{"template":{"spec":{"tolerations":[{"effect":"NoSchedule","key":"userapp","value":"true"}]}}}}' -n kube-system
  
 Create a Namespace (namespace name is uesd as $org_name)
 
