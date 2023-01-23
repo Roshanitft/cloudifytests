@@ -59,6 +59,11 @@ nginx:
   terminationGracePeriodSeconds: 60  
   volumes: {}
   affinity: {}
+  tolerations:
+  - effect: NoSchedule
+    key: userapp
+    operator: Equal
+    value: "true"
   service:
     type: "ClusterIP"
   serviceMonitor:
@@ -92,6 +97,11 @@ sessionUi:
     type: "ClusterIP"
   volumes: {}
   affinity: {}
+  tolerations:
+  - effect: NoSchedule
+    key: userapp
+    operator: Equal
+    value: "true"
   
 
 sessionbe:
@@ -119,6 +129,11 @@ sessionbe:
     type: "ClusterIP"
   volumes: {}
   affinity: {}
+  tolerations:
+  - effect: NoSchedule
+    key: userapp
+    operator: Equal
+    value: "true"
   
 
 
@@ -148,6 +163,11 @@ smcreate:
     type: "ClusterIP"
   volumes: {}
   affinity: {}
+  tolerations:
+  - effect: NoSchedule
+    key: userapp
+    operator: Equal
+    value: "true"
   
 
 smdelete:
@@ -175,6 +195,11 @@ smdelete:
     type: "ClusterIP"
   volumes: {}
   affinity: {}
+  tolerations:
+  - effect: NoSchedule
+    key: userapp
+    operator: Equal
+    value: "true"
   
 
 urls:
