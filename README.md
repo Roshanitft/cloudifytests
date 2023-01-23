@@ -32,10 +32,11 @@ Apply helm using following command:
         --set ingress.hosts[0]=$ingress_host \
         --set sessionbe.serviceAccountName=$org_name --set nginxhpa.metadata.namespace=$org_name \
         --set be.ORG_NAMESPACE=$org_name \
-        --set sessionbe.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/cloudifytest_be:stg" \
-        --set sessionUi.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/cloudifytests_fe" --set sessionUi.image.tag="tunnel_fe" \
-        --set smcreate.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sm_create:stg"  \
-        --set smdelete.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/sm_delete:stg" \
+        --set sessionbe.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/marketplace_images:sessionbe_v0.0.1" \
+        --set sessionUi.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/marketplace_images"  \
+        --set sessionUi.image.tag="sessionui_v0.0.1" \
+        --set smcreate.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/marketplace_images:smcreate_v0.0.1"  \
+        --set smdelete.image.repository="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/marketplace_images:smdelete_v0.0.1" \
         --set sessionmanager.AWS_ECR_IMAGE="$ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com"   \
         --set smlogsvalues.ORG_NAME=$org_name \
         --set behpa.metadata.namespace=$org_name --set sessionManagaerhpa.metadata.namespace=$org_name \
